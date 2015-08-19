@@ -48,7 +48,7 @@ public class MyConnectionFactory {
 	}
 	
 	
-	private static Connection getConnection() {
+	public static Connection getConnection() {
 		try {
 			if(connection == null) {
 				connection = getConnectionFactory().createConnection("Administrator", "Administrator");
@@ -59,35 +59,6 @@ public class MyConnectionFactory {
 		return connection;
 	}
 	
-	private static Session createSession() {
-		try {
-			return getConnection().createSession(false, 1);
-		} catch (JMSException e) {
-			e.printStackTrace();
-		}
-		return null;
-	}
 	
-	public Queue createQueue(String queueName) {
-		try {
-			return createSession().createQueue(queueName);
-		} catch (JMSException e) {
-			e.printStackTrace();
-		}
-		return null;
-	}
 	
-	public Topic createTopic(String topicName) {
-		try {
-			return createSession().createTopic(topicName);
-		} catch (JMSException e) {
-			e.printStackTrace();
-		}
-		return null;
-	}
-	
-	public static void main(String[] args) {
-		Queue queue = new MyConnectionFactory().createQueue("queue1");
-		Topic topic = new MyConnectionFactory().createTopic("topic1");
-	}
 }
