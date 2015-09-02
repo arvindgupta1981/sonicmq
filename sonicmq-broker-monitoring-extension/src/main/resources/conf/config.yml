@@ -1,0 +1,40 @@
+#location for eg. tcp://localhost:2506
+location: ""
+
+username: ""
+
+password: ""
+
+brokers:
+  - displayName: ""
+    objectName: ""
+    container:
+        objectName: ""
+        displayName: ""
+
+  - displayName: ""
+    objectName: ""
+    container:
+        objectName: ""
+        displayName: ""
+
+#prefix used to show up metrics in AppDynamics
+metricPrefix: "Custom Metrics|SonicMq|"
+
+#JMX timeout in seconds
+timeout: 30
+
+#Comma Separated Regex patterns to exclude queues.
+queueExcludePatterns: [
+
+]
+
+#Comma Separated Regex patterns to exclude users.
+userExcludePatterns: [
+
+]
+
+#Comma Separated Regex patterns to exclude durable subscriptions.
+topicExcludePatterns: [
+
+]
