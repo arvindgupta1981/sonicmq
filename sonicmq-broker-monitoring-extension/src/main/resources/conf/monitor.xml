@@ -1,0 +1,23 @@
+<monitor>
+    <name>SonicMQBrokerMonitor</name>
+    <type>managed</type>
+    <description>SonicMQ Broker monitor</description>
+    <monitor-configuration></monitor-configuration>
+    <monitor-run-task>
+        <execution-style>periodic</execution-style>
+        <execution-frequency-in-seconds>60</execution-frequency-in-seconds>
+        <name>SonicMQ Broker Monitor Run Task</name>
+        <display-name>SonicMQ Broker Monitor Task</display-name>
+        <description>SonicMQ Broker Monitor Task</description>
+        <type>java</type>
+        <execution-timeout-in-secs>60</execution-timeout-in-secs>
+        <task-arguments>
+            <!-- config file-->
+            <argument name="config-file" is-required="true" default-value="monitors/SonicmqBrokerMonitor/config.yml" />
+        </task-arguments>
+        <java-task>
+            <classpath>sonicmq-broker-monitoring-extension.jar;lib/broker.jar;lib/mfcontext.jar;lib/mgmt_client.jar;lib/sonic_Client.jar;lib/sonic_Crypto.jar;lib/sonic_mgmt_client.jar</classpath>
+            <impl-class>com.appdynamics.extensions.sonicmq.SonicMqBrokerMonitor</impl-class>
+        </java-task>
+    </monitor-run-task>
+</monitor>
