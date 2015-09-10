@@ -40,7 +40,7 @@ public class MyConnectionFactory {
 		ConnectionFactory conFactory = null;
 		try {
 			conFactory = 
-					(ConnectionFactory)getContext().lookup("ConnectionFactory1");
+					(ConnectionFactory)getContext().lookup("Conatiner100");
 		} catch (NamingException e) {
 			e.printStackTrace();
 		}

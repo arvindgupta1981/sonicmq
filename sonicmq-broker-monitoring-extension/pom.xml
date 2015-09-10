@@ -12,7 +12,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss</maven.build.timestamp.format>
         <target.dir>${project.build.directory}/SonicmqBrokerMonitor</target.dir>
-        <basedir>C:\F\workspace\sonicmq-broker-monitoring-extension-master</basedir>
+        <basedir>C:\Users\arvind.gupta\git\sonicmq\sonicmq-broker-monitoring-extension</basedir>
         <sonicmq.version>8.5.1</sonicmq.version>
     </properties>
 
